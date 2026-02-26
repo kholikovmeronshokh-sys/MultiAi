@@ -396,6 +396,10 @@ app.get("/health", (req, res) => {
   res.json({ ok: true });
 });
 
-app.listen(port, () => {
-  console.log(`Summary API running on http://localhost:${port}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Summary API running on http://localhost:${port}`);
+  });
+}
+
+export default app;
