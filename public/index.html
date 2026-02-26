@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Summary - Uzbekcha Qisqartma</title>
+<link rel="icon" href="/favicon.ico?v=2" />
+<link rel="shortcut icon" href="/favicon.ico?v=2" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon_io/site.webmanifest" /><link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
+<link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-shapes" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Tez va aniq</p>
+        <h1>AI Summary API</h1>
+        <p class="subtitle">
+          Uzun matnni 3-5 qatorga qisqartiring. YouTube tavsifi, yangilik yoki
+          oddiy matn - hammasi ozbekchada.
+        </p>
+        <div class="nav">
+          <a class="nav-link active" href="/">Summary</a>
+          <a class="nav-link" href="/chatbot">Chatbot</a>
+          <a class="nav-link" href="/code">Code</a>
+          <a class="nav-link" href="/translater">Translater</a>
+          <a class="nav-link" href="/shrift">Shrift</a>
+          <a class="nav-link" href="/heshteg">Heshteg</a>
+          <a class="nav-link" href="/idea">Idea</a>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="controls">
+          <label class="field">
+            <span>Rejim</span>
+            <select id="mode">
+              <option value="general">Umumiy</option>
+              <option value="youtube">YouTube konspekt</option>
+              <option value="news">Yangilik summary</option>
+            </select>
+          </label>
+
+          <div class="stats">
+            <span id="count">0 belgi</span>
+            <span class="dot"></span>
+            <span>3-5 qator</span>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Matn</span>
+          <textarea
+            id="input"
+            placeholder="Matnni shu yerga joylang..."
+            rows="10"
+          ></textarea>
+        </label>
+
+        <div class="actions">
+          <button id="summarize" class="primary">Qisqartir</button>
+          <button id="clear" class="ghost">Tozalash</button>
+        </div>
+      </section>
+
+      <section class="panel result">
+        <div class="result-header">
+          <h2>Natija</h2>
+          <div class="result-actions">
+            <button id="copy" class="ghost">Nusxa olish</button>
+          </div>
+        </div>
+        <div id="output" class="output">Bu yerda qisqa xulosa chiqadi...</div>
+        <div id="error" class="error" role="alert"></div>
+      </section>
+
+      <section class="panel bio">
+        <div class="result-header">
+          <h2>Bio Generator</h2>
+          <div class="result-actions">
+            <button id="bioCopy" class="ghost">Nusxa olish</button>
+          </div>
+        </div>
+        <div class="bio-grid">
+          <label class="field">
+            <span>Ism (ixtiyoriy)</span>
+            <input id="bioName" type="text" placeholder="Masalan: Ali" />
+          </label>
+          <label class="field">
+            <span>Uslub (ixtiyoriy)</span>
+            <input id="bioVibe" type="text" placeholder="Masalan: kreativ, startupchi" />
+          </label>
+          <label class="field">
+            <span>Kalit so'zlar (ixtiyoriy)</span>
+            <input id="bioKeywords" type="text" placeholder="Masalan: AI, dizayn, biznes" />
+          </label>
+        </div>
+        <div class="actions">
+          <button id="bioGenerate" class="primary">Bio yarat</button>
+          <button id="bioClear" class="ghost">Tozalash</button>
+        </div>
+        <div id="bioOutput" class="output">Bu yerda bio chiqadi...</div>
+        <div id="bioError" class="error" role="alert"></div>
+      </section>
+
+      <footer class="footer">
+        <span>2026 yil MultiAi</span>
+        <span class="dot"></span>
+        <span>Kholikov Meronshokh</span>
+      </footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
+
